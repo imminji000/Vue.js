@@ -60,7 +60,7 @@ const user = reactive({
 });
 const btnLogin = () => {
   axios
-    .post("http://43.201.82.180:8080/Voard/user/login", user)
+    .post("/api/user/login", user)
     .then((response) => {
       console.log(response);
       const accessToken = response.data.accessToken;

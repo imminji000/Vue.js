@@ -13,7 +13,7 @@ onBeforeMount(() => {
   const accessToken = localStorage.getItem("accessToken");
   if (accessToken != null) {
     axios
-      .get("http://localhost:8080/Voard/user/auth", {
+      .get("/api/user/auth", {
         headers: { "X-AUTH-TOKEN": accessToken },
       })
       .then((response) => {

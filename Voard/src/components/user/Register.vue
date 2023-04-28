@@ -198,7 +198,7 @@ const loading = ref(false);
 const btnCheckUid = () => {
   loading.value = true;
   axios
-    .get("http://43.201.82.180:8080/Voard/user/countUid", {
+    .get("/api/user/countUid", {
       params: { uid: user.uid },
     })
     .then((response) => {
@@ -223,7 +223,7 @@ const btnCancel = () => {
 };
 const btnRegister = () => {
   axios
-    .post("http://43.201.82.180:8080/Voard/user/register", user)
+    .post("/api/user/register", user)
     .then((response) => {
       console.log(response);
       router.push("/user/login");

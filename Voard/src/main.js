@@ -25,18 +25,5 @@ app.use(userStore);
 app.mount("#app");
 
 // axios 전역설정
-/*
-axios.defaults.baseURL = "http://localhost:8080";
-axios.interceptors.request.use(
-  function (config) {
-    const accessToken = localStorage.getItem("accessToken");
-    if (accessToken) {
-      config.headers["X-AUTH-TOKEN"] = accessToken;
-    }
-    return config;
-  },
-  function (error) {
-    return Promise.reject(error);
-  }
-);
-*/
+axios.defaults.baseURL = "http://localhost:8787";
+//axios.defaults.baseURL = http://43.201.82.180:8787; // 배포용
